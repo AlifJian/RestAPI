@@ -1,0 +1,27 @@
+{
+  "name": "restapi",
+  "version": "1.0.0",
+  "description": "Mencoba membuat rest API dengan express,prisma",
+  "main": "App",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlifJian/RestAPI.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "AlifJian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlifJian/RestAPI/issues"
+  },
+  "homepage": "https://github.com/AlifJian/RestAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "prisma": "^5.5.2"
+  }
+}
