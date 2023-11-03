@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/AlifJian/RestAPI#readme",
   "dependencies": {
+    "@prisma/client": "^5.5.2",
     "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "prisma": "^5.5.2"
