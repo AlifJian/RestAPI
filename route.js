@@ -7,4 +7,6 @@ route.get('/mahasiswa', pengendali.tampilkanData);
 
 route.post('/mahasiswa', pengendali.tambahData);
 
+route.put('/mahasiswa/:id', pengendali.editData);
+
 module.exports = route;

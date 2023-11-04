@@ -2,8 +2,8 @@
 
 exports.ok = (value,res) => {
     const data = {
-        value,
-        status : 200 
+        status : 200 ,
+        value
     }
 
     res.json(data);
@@ -12,8 +12,8 @@ exports.ok = (value,res) => {
 
 exports.err = (value,res) => {
     const data = {
-        value,
-        status : 500 
+        status : 500 ,
+        value
     }
 
     res.json(data);

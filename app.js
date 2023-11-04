@@ -1,3 +1,4 @@
+// Import module/lib/framework yang diperlukan
 const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
