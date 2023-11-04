@@ -75,3 +75,16 @@ exports.editData = (req,res) => {
         response.err(err,res);
     })
 }
+
+exports.hapusData = (req,res) => {
+    const id = parseInt(req.params.id);
+    database.mahasiswa.delete({
+        where : {
+            id
+        }
+    })
+    .then( value => {
+        response.ok(value, res);
+    })
+    .catch(err => response.err(err));
+}

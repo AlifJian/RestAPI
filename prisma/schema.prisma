@@ -13,7 +13,7 @@ datasource db {
 model Mahasiswa{
   id Int @unique @default(autoincrement())
   nama String
-  nim String @unique @db.VarChar(10)
+  nim String @unique @db.VarChar(15)
   jurusan String
   fakultas String
 }
