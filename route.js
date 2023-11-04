@@ -5,6 +5,8 @@ const pengendali = require("./controller");
 
 route.get('/mahasiswa', pengendali.tampilkanData);
 
+route.get('/mahasiswa/profile/:id', pengendali.tampilkanDataDenganId);
+
 route.post('/mahasiswa', pengendali.tambahData);
 
 route.put('/mahasiswa/:id', pengendali.editData);

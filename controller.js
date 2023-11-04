@@ -8,6 +8,9 @@ const database = new PrismaClient();
 exports.tampilkanData = (req,res) => {
     database.mahasiswa.findMany()
     .then(value => {
+        if(value == null) {
+            return response.notFound(res);
+        }
         response.ok(value,res)
     })
     .catch(err => {
@@ -15,6 +18,26 @@ exports.tampilkanData = (req,res) => {
     })
 }
 
+exports.tampilkanDataDenganId = (req, res) => {
+    
+    const id = parseInt(req.params.id);
+    
+    database.mahasiswa.findUnique({
+        where : {
+            id
+        }
+    }
+    )
+    .then(value => {
+        if(value == null) {
+            return response.notFound(res);
+        }
+        response.ok(value, res);
+    })
+    .catch(err => {
+        response.err(err, res);
+    }) 
+}
 exports.tambahData = (req,res) => {
     const nama = req.body.nama;
     const nim = req.body.nim;
@@ -84,7 +107,10 @@ exports.hapusData = (req,res) => {
         }
     })
     .then( value => {
+        if(value == null) {
+            return response.notFound(res);
+        }
         response.ok(value, res);
     })
-    .catch(err => response.err(err));
+    .catch(err => response.err(err,res));
 }
